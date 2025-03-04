@@ -32,4 +32,5 @@ async function replyMessage(replyToken, text) {
     });
 }
 
-app.listen(3000, () => console.log('Bot is running on port 3000'));
+const PORT = process.env.PORT || 3000; // 環境変数 PORT を優先
+app.listen(PORT, () => console.log(`Bot is running on port ${PORT}`));
